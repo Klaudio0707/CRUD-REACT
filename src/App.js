@@ -27,8 +27,14 @@ livros: [
     autor: "Ricardo da Silva Ogliari"
   }
 ]
+};
+inserirLivro = livro => {
+  livro.id = this.state.livros.length + 1;
+  this.setState({
+    livros: [...this.state.livros, livro]
+  });
+}
 
-  }
   
   render() {
     return (
