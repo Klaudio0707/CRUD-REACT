@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const TabelaLivros = ({ livros }) => {
   
@@ -25,7 +26,7 @@ const TabelaLivros = ({ livros }) => {
                         <td>{livro.isbn}</td>
                         <td>{livro.titulo}</td>
                         <td>{livro.autor}</td>
-                        <td><button className='botao editar'>Editar</button></td>
+                        <td><button className='botao editar'><Link to={`/editar/${livro.isbn}`}>Editar</Link></button></td>
                         <td><button className='botao remover'>Remover</button></td>
                     </tr>
                     ))}
